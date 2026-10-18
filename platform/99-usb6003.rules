@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: MIT
+# Lets members of the plugdev group, and the person logged in at the machine, open a USB-6003
+# (product ID 76c6) or its OEM version (76c7) without root.
+# Install: sudo cp 99-usb6003.rules /etc/udev/rules.d/
+#          sudo udevadm control --reload-rules && sudo udevadm trigger
+SUBSYSTEM=="usb", ATTR{idVendor}=="3923", ATTR{idProduct}=="76c6", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="3923", ATTR{idProduct}=="76c7", MODE="0660", GROUP="plugdev", TAG+="uaccess"
