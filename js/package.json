@@ -1,0 +1,18 @@
+{
+  "name": "emlusb6003",
+  "version": "0.1.0",
+  "description": "Driver for the NI USB-6003 and NI's OEM version of it, over WebUSB",
+  "license": "MIT",
+  "author": "Ian Howell",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./protocol": "./src/protocol.js",
+    "./worker": "./src/worker.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" }
+}
